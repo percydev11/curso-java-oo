@@ -1,3 +1,5 @@
+package model;
+
 public class Patient extends User {
     private String birthday;
     private double weight;
@@ -5,7 +7,7 @@ public class Patient extends User {
     private String blood;
 
     public Patient(String name, String email) {
-        //Viene de la clase padre User
+        //Viene de la clase padre model.User
         super(name, email);
     }
 

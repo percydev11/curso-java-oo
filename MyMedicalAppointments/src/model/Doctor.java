@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -14,13 +16,13 @@ public class Doctor extends User {
         this.speciality = speciality;
     }
 
-    Doctor(String name, String email) {
+    public Doctor(String name, String email) {
         super(name, email);
         System.out.println("El nombre del doctor asignado es: " + name);
         this.speciality = speciality;
     }
 
-    //Sobreescriendo de la clase padre (User)
+    //Sobreescriendo de la clase padre (model.User)
     @Override
     public String toString() {
         return super.toString() + "\nSpeciality: " + speciality +

@@ -12,8 +12,8 @@ public class IUMenu {
 
         int response = 0;
         do {
-            System.out.println("1. Doctor");
-            System.out.println("2. Patient");
+            System.out.println("1. model.Doctor");
+            System.out.println("2. model.Patient");
             System.out.println("0. Salir");
 
             Scanner sc = new Scanner(System.in);
@@ -21,7 +21,7 @@ public class IUMenu {
 
             switch (response) {
                 case 1:
-                    System.out.println("Doctor");
+                    System.out.println("model.Doctor");
                     response = 0;
                     break;
                 case 2:
@@ -42,7 +42,7 @@ public class IUMenu {
         int response = 0;
         do {
             System.out.println("\n\n");
-            System.out.println("Patient");
+            System.out.println("model.Patient");
             System.out.println("1. Book an appointment");
             System.out.println("2. My appointments");
             System.out.println("0. Return");
