@@ -52,14 +52,14 @@ public abstract class User {
 
     public void setPhoneNumber(String phoneNumber) {
         if (phoneNumber.length() > 8)
-            System.out.println("El número telefónico debe ser de 8 dígitos máximo");
+            System.out.println("The phone number must have a maximum of 8 digits");
         else if (phoneNumber.length() == 8)
             this.phoneNumber = phoneNumber;
     }
 
     @Override
     public String toString() {
-        return "model.User: " + name + ", Email: " + email +
+        return "User: " + name + ", Email: " + email +
                 "\nAddress: " + address + "\nPhone: " +phoneNumber;
     }
 

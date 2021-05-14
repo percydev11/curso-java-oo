@@ -18,9 +18,9 @@ public class UIMenu {
 
         int response = 0;
         do {
-            System.out.println("1. model.Doctor");
-            System.out.println("2. model.Patient");
-            System.out.println("0. Salir");
+            System.out.println("1. Doctor");
+            System.out.println("2. Patient");
+            System.out.println("0. Logout");
 
             Scanner sc = new Scanner(System.in);
             response = Integer.valueOf(sc.nextLine());
@@ -48,7 +48,7 @@ public class UIMenu {
         int response = 0;
         do {
             System.out.println("\n\n");
-            System.out.println("model.Patient");
+            System.out.println("Patient");
             System.out.println("1. Book an appointment");
             System.out.println("2. My appointments");
             System.out.println("0. Return");
@@ -66,7 +66,7 @@ public class UIMenu {
                     break;
                 case 2:
                     System.out.println("::My appointments");
-                    //response = 0;
+
                     break;
                 case 0:
                     showMenu();
@@ -83,8 +83,8 @@ public class UIMenu {
         //userType = 2 Patient
 
         ArrayList<Doctor> doctors = new ArrayList<>();
-        doctors.add(new Doctor("John Martínez", "johh@gmail.com"));
-        doctors.add(new Doctor("Andrés Rodríguez", "andres@gmail.com"));
+        doctors.add(new Doctor("John Martinez", "johh@gmail.com"));
+        doctors.add(new Doctor("Andres Rodriguez", "andres@gmail.com"));
         doctors.add(new Doctor("Violeta Palacios", "violeta@gmail.com"));
 
         ArrayList<Patient> patients = new ArrayList<>();
@@ -115,8 +115,7 @@ public class UIMenu {
                     if(p.getEmail().equals(email)){
                         emailCorrect = true;
                         //Get the login user
-                        patientLogged = p;
-                        //showPatientMenu()
+                        UIPatientMenu.showPatientMenu();
 
                     }
                 }

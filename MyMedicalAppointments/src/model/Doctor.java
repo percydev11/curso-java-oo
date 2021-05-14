@@ -24,7 +24,7 @@ public class Doctor extends User {
 
     }
 
-    //Sobreescriendo de la clase padre (model.User)
+    //Overwriting toString() method  of  the parent class User
     @Override
     public String toString() {
         return super.toString() + "\nSpeciality: " + speciality +
@@ -34,23 +34,23 @@ public class Doctor extends User {
     @Override
     public void showDataUser() {
 
-        System.out.println("Empleado del hospital: La María");
-        System.out.println("Departamento: Neurología");
+        System.out.println("Employee of the hospital: La Maria");
+        System.out.println("Departament: Neurology");
 
     }
 
 
-    //Agregar citas
+    //Method for add the appointments
     public void addAvailableAppointment(String date, String time) {
         availableAppointments.add(new AvailableAppointment(date, time));
     }
 
-    //Mostrar las citas en lista
+    //Show the appointments in the ArrayList
     public ArrayList<AvailableAppointment> getAvailableAppointments() {
         return availableAppointments;
     }
 
-    //Clase estática anidada
+    //Static inner class
     public static class AvailableAppointment {
 
         private int idAvailable;
@@ -67,10 +67,10 @@ public class Doctor extends User {
             this.time = time;
         }
 
-        //Sobreescriendo de la clase Object
+        //Overwriting toString() method of the class Object
         @Override
         public String toString() {
-            return "Avaible Appointments \nDate: " + date +
+            return "Available Appointments \nDate: " + date +
                     "\nTime: " + time;
         }
 

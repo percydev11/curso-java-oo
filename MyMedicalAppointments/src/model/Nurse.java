@@ -5,14 +5,14 @@ public class Nurse extends User {
 
     public Nurse(String name, String email) {
         super(name, email);
-        System.out.println("El nombre del enfermero(a) asignado es: " + name);
+        System.out.println("The name of the nurse assigned is: " + name);
 
     }
 
     @Override
     public void showDataUser() {
-        System.out.println("Empleado del hospital: Pablo Tobón");
-        System.out.println("Departamentos: Nutrición - Pediatría");
+        System.out.println("Employee of the hospital: Pablo Tobon");
+        System.out.println("Departments: Nutrition and Diet - Pediatrics");
     }
 
     public String getSpeciality() {
