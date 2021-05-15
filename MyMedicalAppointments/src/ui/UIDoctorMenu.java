@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class UIDoctorMenu {
 
+    //ArrayList to store doctors with available appointments
     public static ArrayList<Doctor> doctorsAvailableAppointments = new ArrayList<>();
 
     public static void showDoctorMenu() {
@@ -42,7 +43,7 @@ public class UIDoctorMenu {
         do {
             System.out.println();
             System.out.println(":: Add Available Appointment");
-            System.out.println("Select a Month");
+            System.out.println("Select a month");
 
             for (int i = 0; i < 3; i++) {
                 int x = i + 1;
@@ -56,12 +57,11 @@ public class UIDoctorMenu {
             if (response > 0 && response < 4) {
                 //1,2,3
                 int monthSelected = response;
-                System.out.println(monthSelected + ". " + UIMenu.MONTHS[monthSelected - 1]);
+                System.out.println(monthSelected + " . " + UIMenu.MONTHS[monthSelected - 1]);
                 System.out.println("Insert the date available: [dd/mm/yyyy]");
                 String date = sc.nextLine();
 
-                System.out.println("Your date is: " + date + "\n1.Correct \n2. Change Date");
-
+                System.out.println("Your date is: " + date + "\n1.Correct \n2.Change Date");
                 int responseDate = Integer.valueOf(sc.nextLine());
                 if (responseDate == 2) continue;
 
@@ -70,7 +70,7 @@ public class UIDoctorMenu {
                 do {
                     System.out.println("Insert the time available for date: " + date + "[16:00]");
                     time = sc.nextLine();
-                    System.out.println("Your date is: " + date + "\n1.Correct \n2. Change Time");
+                    System.out.println("Your time is: " +  time + "\n1.Correct \n2.Change Time");
                     responseTime = Integer.valueOf(sc.nextLine());
 
                 } while (responseTime == 2);
@@ -87,6 +87,7 @@ public class UIDoctorMenu {
 
 
     private static void checkDoctorAvailableAppointments(Doctor doctor) {
+        //Add doctors with available appointments to ArrayList
         if (doctor.getAvailableAppointments().size() > 0 && !doctorsAvailableAppointments.contains(doctor)) {
             doctorsAvailableAppointments.add(doctor);
         }

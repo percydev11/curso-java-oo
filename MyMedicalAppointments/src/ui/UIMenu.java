@@ -10,7 +10,7 @@ public class UIMenu {
 
     public static final String[] MONTHS = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     public static Doctor doctorLogged;
-    public  static Patient patientLogged;
+    public static Patient patientLogged;
 
     public static void showMenu() {
         System.out.println("Welcome to My Appointments");
@@ -98,10 +98,10 @@ public class UIMenu {
             Scanner sc = new Scanner(System.in);
             String email = sc.nextLine();
             if (userType == 1) {
-                for (Doctor d : doctors){
-                    if(d.getEmail().equals(email)){
+                for (Doctor d : doctors) {
+                    if (d.getEmail().equals(email)) {
                         emailCorrect = true;
-                        //Get the login user
+                        //Get the logged user
                         doctorLogged = d;
                         UIDoctorMenu.showDoctorMenu();
 
@@ -111,10 +111,10 @@ public class UIMenu {
             }
 
             if (userType == 2) {
-                for (Patient p : patients){
-                    if(p.getEmail().equals(email)){
+                for (Patient p : patients) {
+                    if (p.getEmail().equals(email)) {
                         emailCorrect = true;
-                        //Get the login user
+                        patientLogged = p;
                         UIPatientMenu.showPatientMenu();
 
                     }
